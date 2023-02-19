@@ -1,4 +1,4 @@
-i#include <stdlib.h>
+#include <stdlib.h>
 
 #include <time.h>
 
@@ -6,7 +6,7 @@ i#include <stdlib.h>
 
 /**
  * main - Prints a text according number
- * Return: Always (success)
+ * Return: Always (Success)
  *
  */
 
