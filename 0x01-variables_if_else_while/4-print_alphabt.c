@@ -10,12 +10,16 @@
 int main(void)
 
 {
+	char low, e, q;
 
-	int i;
+	e = 'e';
+	q = 'q';
 
-	for (i = 0; i < 10; i++)
-	printf("%d", i);
-	printf("\n");
-
+	for (low = 'a'; low <= 'z', low++)
+	{
+	if (low !=e && low !=q)
+	putchar(low);
+	}
+	putchar('\n');
 	return (0);
 }
