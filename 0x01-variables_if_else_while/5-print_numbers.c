@@ -9,14 +9,12 @@
 
 int main(void)
 
-	int d;
-
 {
-	int d;
+	int i;
 
-	for (d = '0'; d <= '9'; d++)
-	putchar(d);
-	putchar('\n');
+	for (i = 0; i < 10; i++)
+	printf("%d", i);
+	printf("\n");
 
 	return (0);
 }
