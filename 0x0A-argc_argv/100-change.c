@@ -1,14 +1,13 @@
 #include <stdio.h>
-	#include <stdlib.h>
-	#include <ctype.h>
-	#include <string.h>
-	/**
-	 * check_num - check - string there are digit
-	 * @str: array str
-	 *
-	 * Return: Always 0 (Success)
-	 */
-	int check_num(char *str)/*Check_num function*/
+#include <stdlib.h>
+#include <ctype.h>
+#include <string.h>
+/**
+* check_num - check - string there are digit
+* @str: array str
+* Return: Always 0 (Success)
+*/
+int check_num(char *str)
 	{
 		/*Declaring variables*/
 		unsigned int count;
@@ -46,7 +45,7 @@ int main(int argc, char *argv[])
 	int num, j, result;
 	int coins[] = {25, 10, 5, 2, 1};
 
-	if (argc != 2)
+	if (argc != 2 || !check_num(argv[1]))
 
 	{
 		printf("Error\n");
