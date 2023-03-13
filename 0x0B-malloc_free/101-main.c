@@ -1,7 +1,6 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
 /**
  * print_tab - Prints an array of string
@@ -12,48 +11,30 @@
 
 void print_tab(char **tab)
 {
-        int i;
+	int i;
 
-        for (i = 0; tab[i] != NULL; ++i)
-        {
-        printf("%s\n", tab[i]);
-        }
+	for (i = 0; tab[i] != NULL; ++i)
+	{
+	printf("%s\n", tab[i]);
+	}
 }
 
 /**
- * parse_string - Tokenizes a string
- * @str: The string to tokenize
- *
- * Return: A pointer to an array of strings, or NULL if an error occurred
+ * main - check the code for ALX School students.
+ * Return: 1 if an error occurred, 0 otherwise
  */
 
-char **parse_string(char *str)
+int main(void)
+
 {
-        char **tokens;
-        char *token;
-        int i, count;
+	char **tab;
 
-        count = 0;
-        token = strtok(str, " ");
-        while (token != NULL)
-        {
-                count++;
-                token = strtok(NULL, " ");
-        }
-
-        tokens = malloc((count + 1) * sizeof(char *));
-        if (tokens == NULL)
-                return (NULL);
-
-        i = 0;
-        token = strtok(str, " ");
-        while (token != NULL)
-        {
-                tokens[i] = token;
-                i++;
-                token = strtok(NULL, " ");
-        }
-        tokens[i] = NULL;
-
-        return (tokens);
+	tab = strtow("      ALX School         #cisfun      ");
+	if (tab == NULL)
+	{
+	printf("Failed\n");
+	return (1);
+	}
+	print_tab(tab);
+	return (0);
 }
